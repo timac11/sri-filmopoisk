@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+}
+
+.leftBlock {
+  display: flex;
+  flex-shrink: 0;
+  min-width: 408px;
+}
+
+.mainBlock {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.moviesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

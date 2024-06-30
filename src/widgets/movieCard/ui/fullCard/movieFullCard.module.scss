@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  gap: 24px;
+}
+
+.avatar {
+  width: 400px;
+  height: 500px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: left;
+  width: 100%;
+}
+
+.itemsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+
+  &Name {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  &Value {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &Name {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  &Value {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+  }
+}

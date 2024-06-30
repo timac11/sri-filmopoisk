@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+}
+
+.name {
+  width: 90px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ABABAB;
+  flex-shrink: 0;
+  text-align: left;
+}
+
+.value {
+  max-width: 600px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+}

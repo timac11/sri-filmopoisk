@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  padding: 24px;
+  gap: 24px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 100px;
+  height: 120px;
+  border-radius: 8px;
+}
+
+.mainPart {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.rating {
+  width: 80px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+

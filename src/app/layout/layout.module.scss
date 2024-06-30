@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #FAFAFA;
+}
+
+.header {
+  &Wrapper {
+    display: flex;
+  }
+}
+
+.main {
+  &Wrappper {
+    padding: 20px 32px;
+  }
+}
