@@ -37,6 +37,6 @@ const MovieItem: FC<MovieItemProps> = ({name, value}) => {
 const MovieDescription: FC<MovieItemProps> = ({name, value}) => {
   return <div className={styles.description}>
     <span className={styles.descriptionName}>{name}</span>
-    <span className={styles.descriptionValue}>{value}</span>
+    <span className={styles.descriptionValue}> {value}</span>
   </div>
 }

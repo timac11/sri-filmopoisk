@@ -26,7 +26,7 @@ export const YEARS_MAP = {
 export type GenresEnglish = keyof typeof GENRES_MAP;
 export type GenresRussian = typeof GENRES_MAP[GenresEnglish];
 
-type Actor = {
+export type Actor = {
   name: string;
   photo: string; // base64 img
 }

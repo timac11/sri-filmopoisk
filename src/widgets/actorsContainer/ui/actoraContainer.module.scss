@@ -1,3 +1,7 @@
+.wrapper {
+
+}
+
 .container {
   display: flex;
   gap: 24px;
@@ -5,19 +9,23 @@
 }
 
 .title {
+  display: flex;
   font-size: 24px;
   font-weight: 600;
   text-align: left;
+  margin-bottom: 16px;
 }
 
 .item {
   &img {
     width: 160px;
     height: 228px;
+    border-radius: 8px;
   }
 }
 
 .name {
+  display: flex;
   font-size: 14px;
   font-weight: 400;
   text-align: left;

@@ -2,6 +2,7 @@ import {FC} from "react";
 import {useParams} from "react-router-dom";
 import {useGetMovieQuery} from "../../../entities/movies/model/movieApi.ts";
 import {MovieFullCard} from "../../../widgets/movieCard/ui/fullCard/movieFullCard.tsx";
+import {ActorsContainer} from "../../../widgets/actorsContainer/ui/actorsContainer.tsx";
 
 export const MoviePage: FC = () => {
   const { id } = useParams();
@@ -13,5 +14,6 @@ export const MoviePage: FC = () => {
 
   return <div>
     <MovieFullCard item={data} />
+    <ActorsContainer items={data.actors} />
   </div>
 }
