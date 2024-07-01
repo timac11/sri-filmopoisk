@@ -1,6 +1,7 @@
 import styles from './select.module.scss';
-import {FC, useCallback, useMemo, useState} from "react";
+import {FC, useCallback, useMemo, useRef, useState} from "react";
 import {ArrowDown} from "../../../assets/icons";
+import useClickOutside from "../../../hooks/useClickOutside.ts";
 
 type SelectItem = {
   value: string;
@@ -22,6 +23,12 @@ export const Select: FC<SelectProps> = ({ title, onChange, options, value, place
     onChange?.(item);
   }, [onChange]);
 
+  const ref = useRef();
+
+  useClickOutside(ref, () => {
+    setIsOpened(false);
+  })
+
   const selectValue = useMemo(() => {
     if (value) {
       const item = options.find(item => item.value === value);
@@ -33,7 +40,7 @@ export const Select: FC<SelectProps> = ({ title, onChange, options, value, place
     return undefined;
   }, [options, value]);
 
-  return <div className={styles.container}>
+  return <div className={styles.container} ref={ref}>
     <span className={styles.title}>{title}</span>
     <div className={styles.inputWrapper}>
       <input className={styles.input} value={selectValue?.name} placeholder={placeholder}/>

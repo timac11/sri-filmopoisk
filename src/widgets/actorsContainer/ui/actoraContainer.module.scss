@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.item {
+  &img {
+    width: 160px;
+    height: 228px;
+  }
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+}
