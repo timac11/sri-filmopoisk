@@ -6,15 +6,15 @@ import {updateGenre, updateYear} from "../../../entities/filter";
 
 const GENRE_OPTIONS = Object.keys(GENRES_MAP).map((key) => {
   return {
-    value: GENRES_MAP[key],
-    name: key,
+    name: GENRES_MAP[key],
+    value: key,
   }
 })
 
 const YEAR_OPTIONS = Object.keys(YEARS_MAP).map((key) => {
   return {
-    value: YEARS_MAP[key],
-    name: key,
+    name: YEARS_MAP[key],
+    value: key,
   }
 })
 

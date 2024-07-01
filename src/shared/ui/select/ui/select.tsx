@@ -52,7 +52,7 @@ export const Select: FC<SelectProps> = ({ title, onChange, options, value, place
           className={styles.listItem}
           onClick={() => onItemCLick(item)}
           key={item.name}>
-          {item.value}
+          {item.name}
         </li>)}
       </ul>}
     </div>
