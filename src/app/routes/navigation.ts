@@ -1,7 +1,8 @@
-import {TRouterConfig} from "../../shared/types/router/routerConfig.ts";
-import {EPageId, EPath} from "./paths.ts";
-import {MoviesPage} from "../../pages/movies";
-import {MoviePage} from "../../pages/movie";
+import { TRouterConfig } from '@shared/types/router/routerConfig.ts';
+import { MoviesPage } from '@pages/movies';
+import { MoviePage } from '@pages/movie';
+
+import { EPageId, EPath } from './paths.ts';
 
 export const routerConfig: TRouterConfig<EPath, EPageId> = {
   [EPageId.MAIN]: {
@@ -16,5 +17,5 @@ export const routerConfig: TRouterConfig<EPath, EPageId> = {
     Component: MoviePage,
     parameter: 'id',
     guards: [],
-  }
+  },
 };

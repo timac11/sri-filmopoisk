@@ -1,4 +1,4 @@
-import {TRouteGuard} from "../../types/router/routerConfig.ts";
+import { TRouteGuard } from '@shared/types/router/routerConfig.ts';
 
 export const combineGuards = <P>(
   Component: React.ComponentType<P>,

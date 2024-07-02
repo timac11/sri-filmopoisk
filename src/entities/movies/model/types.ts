@@ -1,16 +1,16 @@
 export const GENRES_MAP = {
-  comedy: "комедия",
-  drama: "драма",
-  action: "боевик",
-  thriller: "триллер",
-  horror: "ужасы",
-  family: "семейный",
-  cartoon: "анимированный",
-  fantasy: "фэнтези",
-  romance: "романтика",
-  adventure: "приключения",
-  musical: "мьюзикл",
-  war: "военный",
+  comedy: 'комедия',
+  drama: 'драма',
+  action: 'боевик',
+  thriller: 'триллер',
+  horror: 'ужасы',
+  family: 'семейный',
+  cartoon: 'анимированный',
+  fantasy: 'фэнтези',
+  romance: 'романтика',
+  adventure: 'приключения',
+  musical: 'мьюзикл',
+  war: 'военный',
 } as const;
 
 export const YEARS_MAP = {
@@ -24,12 +24,12 @@ export const YEARS_MAP = {
 } as const;
 
 export type GenresEnglish = keyof typeof GENRES_MAP;
-export type GenresRussian = typeof GENRES_MAP[GenresEnglish];
+export type GenresRussian = (typeof GENRES_MAP)[GenresEnglish];
 
 export type Actor = {
   name: string;
   photo: string; // base64 img
-}
+};
 
 export type FullMovieInfo = {
   id: string;
@@ -41,11 +41,11 @@ export type FullMovieInfo = {
   rating: string; //float
   total_rates_count: string; //int
   actors: Actor[];
-}
+};
 
-export type ShortMovieInfo = Omit<FullMovieInfo, "actors" | "total_rates_count">;
+export type ShortMovieInfo = Omit<FullMovieInfo, 'actors' | 'total_rates_count'>;
 
 export type MoviesResponse = {
-  search_result: ShortMovieInfo[],
-  total_pages: number
-}
+  search_result: ShortMovieInfo[];
+  total_pages: number;
+};

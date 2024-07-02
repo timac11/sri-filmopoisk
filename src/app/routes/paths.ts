@@ -5,5 +5,5 @@ export enum EPath {
 
 export enum EPageId {
   MAIN = 'main',
-  MOVIE = 'movie'
+  MOVIE = 'movie',
 }

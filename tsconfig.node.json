@@ -7,14 +7,14 @@
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "@app/*": ["./src/app/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@widgets/*": ["./src/widgets/*"]
+    }
   },
   "include": ["vite.config.ts"],
-  "paths": {
-    "app/*": ["app/*"],
-    "entities/*": ["entities/*"],
-    "pages/*": ["pages/*"],
-    "shared/*": ["shared/*"],
-    "widgets/*": ["widgets/*"]
-  }
 }

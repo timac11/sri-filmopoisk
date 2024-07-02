@@ -1,5 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
+
+import type { PayloadAction } from '@reduxjs/toolkit';
 
 export interface FilterState {
   genre: string | null;
@@ -11,7 +12,7 @@ const initialState: FilterState = {
   genre: null,
   year: null,
   name: null,
-}
+};
 
 export const filterSlice = createSlice({
   name: 'filter',
@@ -27,9 +28,9 @@ export const filterSlice = createSlice({
       state.name = action.payload;
     },
   },
-})
+});
 
 // Action creators are generated for each case reducer function
-export const { updateYear, updateName, updateGenre } = filterSlice.actions
+export const { updateYear, updateName, updateGenre } = filterSlice.actions;
 
-export default filterSlice.reducer
+export default filterSlice.reducer;

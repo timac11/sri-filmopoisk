@@ -1,3 +1,3 @@
-import { moviesApi, useGetMoviesQuery } from "./model/moviesApi.ts";
+import { moviesApi, useGetMoviesQuery } from './model/moviesApi.ts';
 
 export { moviesApi, useGetMoviesQuery };

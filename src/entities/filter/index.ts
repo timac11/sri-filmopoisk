@@ -1,5 +1,4 @@
-import filterReducer from './model/filterSlice.ts';
-import { updateYear, updateName, updateGenre } from "./model/filterSlice.ts";
+import filterReducer, { updateYear, updateName, updateGenre } from './model/filterSlice.ts';
 
 export { updateName, updateYear, updateGenre };
 
