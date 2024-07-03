@@ -1,30 +1,54 @@
-# React + TypeScript + Vite
+Filmopoisk
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Функциональные требования:
 
-Currently, two official plugins are available:
+Шапка:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* [+] Позиционируется липко (стики);
 
-## Expanding the ESLint configuration
+Авторизация:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+* [-] Для реализации модального окна используется портал;
+* [-] После успешной авторизации кнопка «Войти» меняется на заглушку иконки пользователя и кнопку «Выйти»;
+    * [-]Сохраняем авторизационный токен из ответа ручки бэка /login (например, в localStorage);
+    * [-]С токеном стоит работать через thunk;
+    * [-]По клику на кнопку «Выйти» удаляем токен и снимаем авторизацию;
+    * [-]При инициализации приложения проверяем авторизационный токен;
 
-- Configure the top-level `parserOptions` property like this:
+Реализована страница списка фильмов:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+* Поиск:
+    * [-]Поиск происходит во время ввода пользователем символов. Дёргаем ручку /search;
+* Фильтры:
+    * [-]Реализованы фильтры с dropdown;
+* Фильтры сохраняются в query-params;
+    * [+-]Реализован список фильмов с пагинацией;
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Страница фильма:
+
+* Реализована работа с получением данных:
+    * [+]Дёргаем ручку /movie:id;
+    * [+]Соответствующие данные отрисованы;
+* Возможность поставить оценку:
+    * [-]Оценку для фильма достаём из ручки /movie/:id;
+    * [-]Если пользователь авторизован, даём возможность поставить оценку — запрос мутации;
+    * [-]После выставления оценки обновляем кеш запроса /movie/:id;
+
+Общий функционал:
+
+* [-]Реализовать единообразную обработку ошибок для запросов;
+* [-]Реализован лоадер;
+* [-]Используем debounce для поиска фильма и выставления оценки;
+
+Стор:
+
+* [+]Используется rtk и rtk-query;
+* [+]Данные корректно разбиты на модули (пример — авторизация, searchParams из фильтров);
+* [+-]Селекторы написаны оптимально (нет переизбытка дублирования);
+
+---
+Миграция на Next:
+
+* [-]Реализована миграция с использованием SSR;
+* [-]Для картинок используется Image некста. Скрины фильма, которые вне вьюпорта грузятся лениво;
+* [-]Страница фильма реализована с помощью Dynamic Routes
